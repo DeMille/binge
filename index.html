@@ -51,7 +51,7 @@
                             javascript:(function(){
                               s=document.createElement('script');
                               s.type='text/javascript';
-                              s.src='//demille.github.io/binge/bookmarklet.js';
+                              s.src='//demille.github.io/Binge/bookmarklet.js';
                               document.body.appendChild(s);
                             })();
                         "
@@ -95,7 +95,13 @@
         <script>
             var elem = document.getElementById('install').onclick = function(){
                 if (typeof chrome !== 'undefined') {
-                    chrome.webstore.install();
+                    chrome.webstore.install('https://chrome.google.com/webstore/detail/ckcalpgemnoejggbleepgmemacmgoofn',
+                        function(success) {
+                            console.log('OK: ', success);
+                        },
+                        function(err) {
+                            console.log('ERR: ', err);
+                        });
                 }
                 return false;
             };

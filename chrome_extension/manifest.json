@@ -2,7 +2,11 @@
   "manifest_version": 2,
   "name": "Binge!",
   "description": "Automatically click 'Continue Watching' in Netflix",
-  "version": "1.0",
+  "version": "1.0.1",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "content_scripts":[
     {
       "matches": ["*://*.netflix.com/*"],

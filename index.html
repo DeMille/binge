@@ -7,10 +7,7 @@
         <title>Binge</title>
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
-
-        <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ckcalpgemnoejggbleepgmemacmgoofn">
     </head>
     <body>
 
@@ -28,23 +25,29 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-md-offset-2 col-md-8 explanation">
-                    <img src="img/continue.png">
-                    <p>Marathoning all seven seasons of that show in one night? Tired of Netflix pretending like you're not actually watching? (c'mon now).  Annoyed by the interruptions three minutes into an episode?? Add this extension and stop being bothered.</p>
+                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 explanation pad-top-2x pad-btm">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="img/continue.png">
+                        </div>
+                        <div class="media-body media-middle">
+                          <p>Tired of Netflix asking every few episodes if you are still watching? Annoyed by the interruptions three minutes into an episode? Add this extension and stop being bothered.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-offset-3 col-md-3 col-sm-6 pad-top text-center">
+                <div class="col-sm-offset-1 col-sm-5 col-md-offset-2 col-md-4 pad-top text-center">
                     <h3>Chrome Extension</h3>
-                    <button type="button" class="btn btn-primary" id="install">
-                        <i class="fa fa-plus-square"></i>
+                    <a href="https://chrome.google.com/webstore/detail/binge/ckcalpgemnoejggbleepgmemacmgoofn" class="btn btn-primary" id="install">
+                        <span class="glyphicon glyphicon-plus"></span>
                         &nbsp; Add to Chrome
-                    </button>
+                    </a>
                     <p class="pad-top"><i>No configuration options, just install and  keep the shows playing.</i></p>
                 </div>
 
-                <div class="col-md-3 col-sm-6 pad-top text-center">
+                <div class="col-sm-5 col-md-4 pad-top text-center">
                     <h3>Bookmarklet</h3>
                     <a type="button" class="btn btn-primary bookmarklet"
                         href="
@@ -56,7 +59,7 @@
                             })();
                         "
                         title="Binge!">
-                        <i class="fa fa-bookmark"></i>
+                        <span class="glyphicon glyphicon-bookmark"></span>
                         &nbsp; Binge
                     </a>
                     <p class="pad-top"><i>Launch after loading a video. It will work until you change the page.</i></p>
@@ -64,16 +67,14 @@
             </div>
 
             <div class="row pad-top-2x">
-                <div class="well col-md-offset-3 col-md-6">
+                <div class="well col-sm-offset-1 col-sm-10 col-md-offset-3 col-md-6">
                     <h3 class="text-center">Browser Compatibility</h3>
 
-                    <ul class="fa-ul">
+                    <ul>
                         <li>
-                            <i class="fa-li fa fa-check-square fa-lg"></i>
                             Only works with the HTML5 video player (not Silverlight)
                         </li>
                         <li>
-                            <i class="fa-li fa fa-check-square fa-lg"></i>
                             Bookmarklet doesn't seem to work in Internet Explorer (breaks Netflix, sorry)
                         </li>
                     </ul>
@@ -84,7 +85,7 @@
                 <div class="col-md-offset-3 col-md-6">
                     <a href="https://github.com/DeMille/binge" class="link">
                         <h4 class="text-center">
-                            by <i class="fa fa-github-square"></i>/DEMILLE
+                            <span class="github-icon"></span>/DEMILLE
                         </h4>
                     </a>
                 </div>
@@ -93,19 +94,6 @@
         </div><!-- container-fluid -->
 
         <script>
-            var elem = document.getElementById('install').onclick = function(){
-                if (typeof chrome !== 'undefined') {
-                    chrome.webstore.install('https://chrome.google.com/webstore/detail/ckcalpgemnoejggbleepgmemacmgoofn',
-                        function(success) {
-                            console.log('OK: ', success);
-                        },
-                        function(err) {
-                            console.log('ERR: ', err);
-                        });
-                }
-                return false;
-            };
-
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

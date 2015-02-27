@@ -38,15 +38,13 @@ button:focus {outline:none !important;}
 .explanation img {
     max-width: 200px;
     margin-right: 20px;
-    margin-bottom: 40px;
-    float: left;
 }
 
 .btn-primary {
     margin-top: 10px;
     background-color: #E00800;
     border-color: #CF0800;
-    padding: 8px 24px 5px;
+    padding: 8px 24px 8px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 50px;
@@ -69,26 +67,38 @@ button:focus {outline:none !important;}
     border-radius: 0px;
 }
 
-.fa-ul li {margin-top: 5px;}
+ul {list-style-type: none; margin: 0 0 20px 0; padding: 0;}
+ul li {
+    padding: 0 0 5px 28px;
+    display: block;
+    position: relative;
+}
+ul li:before {
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  left: 3px; top: 0;
+  content: '\e013';
+}
 
-.link {color: #333;}
+.github-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url('../img/github.png') center center no-repeat;
+    background-size: cover;
+}
+
+.link {font-size: 16px; color: #333;}
 .link:hover {color: #333; text-decoration: none;}
-.link h4 {text-size: 16px;}
 
-@media (max-width: 650px) {
-    .explanation img {
-        float: none;
-        margin: 0 auto 40px;
-        display: block;
-    }
-    .col-sm-6 {margin-top: 40px;}
+@media (max-width: 600px) {
+    .explanation .media-left {display: block; padding-right: 0px;}
+    .explanation img {display: block; margin: 0 auto 20px;}
+    .explanation p {text-align: center; margin-bottom: 30px;}
 }
 
 @media (max-width: 450px) {
-    .logo {
-        height: 150px;
-        margin: 0 auto;
-    }
+    .logo {height: 150px; margin: 0 auto;}
     .title {font-size: 35px;}
 }
 

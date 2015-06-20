@@ -6,6 +6,6 @@ this.bindEvent=function(a,e,p){"undefined"===typeof p&&(p=e,e=b);for(var l=d(thi
 a[d]&&c.selector===b)return!0;return!1})};this.unbindEventWithSelectorAndCallback=function(b,a){var e=d(this);c.removeEvent(function(c){for(var d=0;d<e.length;d++)if(c.target===e[d]&&c.selector===b&&c.callback===a)return!0;return!1})};return this};var h=new m(function(a){var b={attributes:!1,childList:!0,subtree:!0};a.fireOnAttributesModification&&(b.attributes=!0);return b},{fireOnAttributesModification:!1},function(a,b){a.forEach(function(a){var d=a.addedNodes,c=a.target,g=[];null!==d&&0<d.length?
 n(d,b,g):"attributes"===a.type&&f.matchesSelector(c,b.selector)&&-1==b.firedElems.indexOf(c)&&(b.firedElems.push(c),g.push({callback:b.callback,elem:c}));s(g)})}),k=new m(function(a){return{childList:!0,subtree:!0}},{},function(a,b){a.forEach(function(a){a=a.removedNodes;var d=[];null!==a&&0<a.length&&n(a,b,d);s(d)})});r&&g(r.fn);g(HTMLElement.prototype);g(NodeList.prototype);g(HTMLCollection.prototype);g(HTMLDocument.prototype);g(Window.prototype)})(this,"undefined"===typeof jQuery?null:jQuery);
 
-document.getElementById('netflix-player').arrive('.player-autoplay-interrupter', function() {
+document.arrive('.player-autoplay-interrupter', function() {
     document.querySelectorAll('.player-autoplay-interrupter button.button.continue-playing')[0].click();
 });
